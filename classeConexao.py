@@ -9,7 +9,7 @@ class Conexao():
             host='localhost', 
             database='crazybank', 
             user='postgres', 
-            password='Desgraca20'
+            password=''
             )
         self.cur = self.con.cursor()
 
