@@ -8,7 +8,7 @@ class Operador():
         def novaConta():
 
             conexao = Conexao()
-            id = input('insira um id')
+            id = input('insira um id') # I know.
             nome = input('Insira seu nome:')
             cpf = input('Insira seu cpf')
             email = input('Insira seu email')
