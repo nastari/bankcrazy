@@ -21,8 +21,8 @@ class Interface():
             pass
             #usuario = input('Insira seu login')
             #senha = input('Insira sua senha')
-            #conexao = Conexao()
-            #conexao.login(usuario)
+
+            
 
         print('Welcome to the Crazy Bank!')
 
