@@ -1,11 +1,11 @@
 # core.py onde rodará toda a aplicação ao usuário final.
-from nucleoBanco import Operador
+from classInterface import Interface
 
 # declarando objeto operador que conduzirá as operações do cliente
-operario = Operador()
+interf = Interface()
 
 #inicialização do ambiente bancário
-operario.start()
+interf.start()
 
-#
+# Interface
 
