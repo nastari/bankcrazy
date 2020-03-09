@@ -15,14 +15,36 @@ class Interface():
             obj = AccountClients( name = nome , userLogin = usuario , passwordLogin = senha )
             session.add(obj)
             session.commit()
+
+        def painel(user):
+            print ()
+            print ('###### Bank of Crazy ########')
+            print ()
+            print ('Bem vindo: ' + user.name )
+            print ()
+            print ('1- Verificar Saldo')
+            print ('2- Realizar Transferencia')
+            print ('3- Extrato')
+            print ('4- Empréstimos')
+            print ()
+            print ('############################')
             
            
         def login():
             pass
-            #usuario = input('Insira seu login')
-            #senha = input('Insira sua senha')
+            usuario = input('Insira seu login')
+            senha = input('Insira sua senha')
 
-            
+            filt = session.query(AccountClients).filter_by(userLogin= usuario).first() 
+            if (filt):
+                if( filt.passwordLogin == senha):
+                    painel(filt)
+                else:
+                    self.start()
+            else:
+                print("Acesso negado. Verifique suas informações de login.")
+
+        print()
 
         print('Welcome to the Crazy Bank!')
 
