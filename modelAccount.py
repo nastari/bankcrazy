@@ -5,7 +5,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 engine = create_engine('postgresql+psycopg2://postgres:Desgraca20@localhost/crazybank') 
-                            # user:password@host/dbname # LGTM!
+                    #engine = create_engine('yourdatabase://user:password@host/dbname')                 #LGTM!
+                             
 metadata = MetaData( bind = engine )
 Base = declarative_base( metadata = metadata )
 Session = sessionmaker()
