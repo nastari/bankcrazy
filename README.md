@@ -10,7 +10,7 @@ Basic concepts in python on a bank system notion
 0- Install the python
 - https://www.python.org/
 
-1- Just install all libraries
+1- Install all libraries ( type the commands below at the prompt ) 
 - pip install psycopg2
 - pip install sqlalchemy
 
