@@ -4,7 +4,7 @@ from sqlalchemy import ( create_engine, Column, MetaData, Table,Integer, String 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('postgresql+psycopg2://postgres:@localhost/crazybank') 
+engine = create_engine('postgresql+psycopg2://postgres:Desgraca20@localhost/crazybank') 
                             # user:password@host/dbname # LGTM!
 metadata = MetaData( bind = engine )
 Base = declarative_base( metadata = metadata )

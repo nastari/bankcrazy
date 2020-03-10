@@ -1,9 +1,10 @@
 from modelAccount import ( AccountClients , Session, session )
+from Transactions import ( Transactions )
 
 class Interface():
 
-
     def start(self):
+
 
         def novaConta():
 
@@ -17,23 +18,41 @@ class Interface():
             session.commit()
 
         def painel(user):
-            print ()
-            print ('###### Bank of Crazy ########')
-            print ()
-            print ('Bem vindo: ' + user.name )
-            print ()
-            print ('1- Verificar Saldo')
-            print ('2- Realizar Transferencia')
-            print ('3- Extrato')
-            print ('4- Empréstimos')
-            print ()
-            print ('############################')
-            
-           
+            if (user):          
+                print ()
+                print ('  ###### Bank of Crazy ########')
+                print ()
+                print ('  Bem vindo: ' + user.name )
+                print ()
+                print ('  1- Verificar Saldo')
+                print ('  2- Realizar Transferencia')
+                print ('  3- Extrato')
+                print ('  4- Empréstimos')
+                print ()
+                print ('  ############################')
+            else: 
+                print("Error.")
+                self.start()    
+            escolha = int(input('Opção: '))
+            if ( escolha  == 2):
+
+                def InterfaceTransfer():
+                    print('#### OPERAÇÃO DE TRANSFÊRENCIA BANCÁRIA ######')
+                    destiny = input('Para qual conta deseja enviar? R: ')
+                    value = int(input('Qual valor da transferência? R: '))
+                    if ( value >= 0):
+                        transaction = Transactions(user,destiny,value)
+                        transaction.transfer()
+                    else:
+                        print('Operação cancelada.')
+                
+                InterfaceTransfer()
+
+
         def login():
             pass
-            usuario = input('Insira seu login')
-            senha = input('Insira sua senha')
+            usuario = input(' Insira seu login : ')
+            senha = input(' Insira sua senha : ')
 
             filt = session.query(AccountClients).filter_by(userLogin= usuario).first() 
             if (filt):
