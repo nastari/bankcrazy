@@ -9,8 +9,8 @@ Basic concepts in python on a bank system notion
 - https://www.python.org/
 
 1- Just install all libraries
--pip install psycopg2
--pip install sqlalchemy
+- pip install psycopg2
+- pip install sqlalchemy
 
 2- Connect to your database on file modelAccount.py in variable 'engine'
 
