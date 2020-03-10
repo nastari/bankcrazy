@@ -16,7 +16,7 @@ class Transactions:
                 destino.balance = destino.balance + self.value 
                 try:
                     session.commit()
-                    print('Operação realizada com sucesso.')
+                    print(' ---------> Operação realizada com sucesso.')
                 except:
                     self.user.balance = self.user.balance + self.value
                     destino.balance -= self.value
@@ -24,7 +24,7 @@ class Transactions:
                 
 
             else:
-                print('Saldo insuficiente.')
+                print('--------> Saldo insuficiente.')
         else:
-            print("Operação cancelada. Erro: informações de destino erradas.")
+            print(" -------> Operação cancelada. Erro: informações de destino erradas.")
                 

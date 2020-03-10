@@ -28,6 +28,7 @@ class Interface():
                 print ('  2- Realizar Transferencia')
                 print ('  3- Extrato')
                 print ('  4- Empréstimos')
+                print ('  5- Sair')
                 print ()
                 print ('  ############################')
             else: 
@@ -44,9 +45,22 @@ class Interface():
                         transaction = Transactions(user,destiny,value)
                         transaction.transfer()
                     else:
-                        print('Operação cancelada.')
+                        print('------> Operação cancelada.')
+                    painel(user)
                 
                 InterfaceTransfer()
+
+            if ( escolha == 1):
+                def viewBalance():
+                    print('#### OPERAÇÃO DE SALDO BANCÁRIO #####')
+                    print('')
+                    print('--------> ' + user.name + ', SEU SALDO É: ',user.balance)
+                    print('')
+                    painel(user)
+                viewBalance()
+            if ( escolha == 5):
+                print(' ')
+                print('------> Até a próxima, '+ user.name)
 
 
         def login():
