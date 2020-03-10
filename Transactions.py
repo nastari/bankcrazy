@@ -10,7 +10,7 @@ class Transactions:
 
     def transfer(self):
         destino = session.query(AccountClients).filter_by(userLogin= self.destiny).first() 
-        if (destino):
+        if (destino and self.user != destino ):
             if ( self.value <= self.user.balance ):
                 self.user.balance = self.user.balance - self.value
                 destino.balance = destino.balance + self.value 
